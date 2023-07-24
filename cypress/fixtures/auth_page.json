@@ -1,0 +1,7 @@
+{
+    "header": ".page-header__subtitle",
+    "emailField": "[for='email']",
+    "passwordField": "[for='pwd']",
+    "loginButton": ".login__button",
+    "hallControl": "#hall-control .conf-step__title"
+}

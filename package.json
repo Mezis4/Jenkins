@@ -1,0 +1,28 @@
+{
+  "name": "jenkins",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:page:chrome": "cypress run --record --group mainPage --spec \"cypress/e2e/main_page_check/**/*\" --browser chrome",
+    "test:admin:chrome": "cypress run --record --group admin --spec \"cypress/e2e/tests_with_admin_data/**/*\" --browser chrome",
+    "test:parallel:chrome": "run-p -c test:page:chrome test:admin:chrome",
+
+    "test:page:firefox": "cypress run --record --group mainPage --spec \"cypress/e2e/main_page_check/**/*\" --browser firefox",
+    "test:admin:firefox": "cypress run --record --group admin --spec \"cypress/e2e/tests_with_admin_data/**/*\" --browser firefox",
+    "test:parallel:firefox": "run-p -c test:page:firefox test:admin:firefox",
+
+    "test:parallel:chromefirefox": "run-p -c test:page:chrome test:page:firefox",
+
+    "test:page:electron": "cypress run --record --group mainPage --spec \"cypress/e2e/main_page_check/**/*\" --browser electron",
+    "test:admin:electron": "cypress run --record --group admin --spec \"cypress/e2e/tests_with_admin_data/**/*\" --browser electron",
+    "test:parallel:electron": "run-p -c test:page:electron test:admin:electron"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.17.2",
+    "npm-run-all": "^4.1.5"
+  }
+}

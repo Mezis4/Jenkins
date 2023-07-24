@@ -1,0 +1,10 @@
+{
+    "header": "h1",
+    "dayNavigation": ".page-nav__day",
+    "moviesCards": ".movie",
+    "moviesTime": ".movie-seances__list",
+    "hallName": ".conf-step__list > :nth-child(2)",
+    "reservationButton": "button.acceptin-button",
+    "reservationHeader": "h2",
+    "tabsTitle": ".conf-step__header > .conf-step__title"
+}
